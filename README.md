@@ -15,9 +15,11 @@ Checks for each word:
 - It has not already been included in the player’s word list (even if there is an alternate path on the board to form the same word, the word is counted at most once).
 - It can be formed on the board (i.e., it is composed of adjoining letters and each cube is used at most once).
 
-If any of these conditions fail, the word is rejected. If all is good, you add the word to the player’s word list and score. In addition, you graphically show the word’s path by temporarily highlighting its cubes on the board. You can use the graphics function pause to implement the delay. The length of the word determines the score: one point for a 4letter word, two points for 5-letters, and so on. The functions from the gboggle.h interface provide helpful routines for highlighting cubes, displaying word lists, and handling scores. The player enters a blank line when done finding words, which signals the end of the human’s turn.
+If any of these conditions fail, the word is rejected. If all is good, the word is added to the player’s word list and score. In addition, the word’s path is graphically shown by temporarily highlighting its cubes on the board. The length of the word determines the score: one point for a 4letter word, two points for 5-letters, and so on. The player enters a blank line when done finding words, which signals the end of the human’s turn.
 
 ###Computer’s turn
 
 The computer then searches the entire board to find the remaining words missed by the human player. 
 The computer earns points for each word found that meets the requirements (minimum length, contained in English lexicon, not already found, and can be formed on board).
+
+Basically, the computer is unbeatable (unless you're just THAT good!).
